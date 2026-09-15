@@ -31,7 +31,6 @@ export default function CampusNoticesScreen() {
       setNotices(sliced);
       const now = new Date().toLocaleTimeString();
 
-      // Save to AsyncStorage
       await AsyncStorage.setItem(CACHE_KEY, JSON.stringify(sliced));
       await AsyncStorage.setItem(TIMESTAMP_KEY, now);
       setLastUpdated(now);
